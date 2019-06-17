@@ -21,5 +21,4 @@ def color(elev):
 for lat, lon, name, elev in zip(df['LAT'], df['LON'], df['NAME'], df['ELEV']):
     folium.Marker(location=[lat, lon], popup=name + "\n(" + str(elev) + ")", icon=folium.Icon(color=color(elev))).add_to(map)
 
-
 map.save('test.html')
